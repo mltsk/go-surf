@@ -1,0 +1,245 @@
+.header {
+    position: relative;
+    height: 100vh;
+
+    &__title {
+        position: absolute;
+        top: 0;
+        left: -14px;
+        z-index: 1;
+
+        max-width: 457px;
+
+        font-weight: 800;
+        font-size: 200px;
+        line-height: 156px;
+
+        opacity: 0.07;
+    }
+
+    &__aside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        padding-bottom: 45px;
+
+        text-align: center;
+        text-transform: capitalize;
+
+        border-right: 1px solid rgba($color: #fff, $alpha: 0.25);
+    }
+
+    &__search {
+        padding-top: 10px;
+    }
+
+    &__date {
+        font-weight: 800;
+        font-size: 72px;
+        line-height: 64px;
+    }
+
+    &__month {
+        display: block;
+        padding-top: 10px;
+
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 1.4px;
+    }
+
+    &__location {
+        position: relative;
+        
+        display: block;
+        margin-top: 10px;
+        padding-left: 20px;
+
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 1.05px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            width: 11px;
+            height: 13px;
+
+            background-image: url('../img/location.svg');
+            background-repeat: no-repeat;
+        } 
+    }
+
+    &__map {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+    }
+
+    &__arrows-down {
+        position: absolute;
+        bottom: 30px;
+        left: 240px;
+        z-index: 3;
+
+        a {
+            display: block;
+        }
+    }
+}
+
+.slider {
+
+    &__item {
+        position: relative;
+
+        height: 100vh;
+        background-image: url('../img/header-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__info {
+        position: absolute;
+        right: 80px;
+        bottom: 116px;
+
+        text-align: right;
+    }
+
+    &__title {
+        margin-bottom: 48px;
+        
+        font-size: 80px;
+        line-height: 86px;
+        font-weight: 800;
+    }
+
+    &__subtitle {
+        margin-bottom: 5px;
+    }
+
+    &__subtext {
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        margin-bottom: 20px;
+
+        font-size: 40px;
+        line-height: 46px;
+        font-weight: 800;
+    }
+
+    &__link img{
+        display: inline;
+    }
+
+    &__arrows {
+        position: absolute;
+        top: 40px;
+        right: 80px;
+        z-index: 3;
+
+        cursor: pointer;
+
+        &--left{
+            right: 125px;
+        }
+    }
+}
+
+.slider-dots {
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    z-index: 20;
+
+    max-width: 920px;
+    width: 100%;
+
+    text-transform: capitalize;
+    
+    cursor: pointer;
+
+    .slick-current{
+
+        .slider-dots__box {
+            border-top: 4px solid $green;
+        }
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 200px;
+        height: 44px;
+
+        border-top: 4px solid #fff;
+    }
+
+    &__number {
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 800;
+    }
+
+    &__name {
+        font-weight: 300;
+        line-height: 19px;
+    }
+}
+
+.menu {
+    flex-grow: 1;
+    max-height: 355px;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__link {
+        color: white;
+        text-decoration: none;
+    }
+
+    span {
+        display: block;
+        padding-top: 6px;
+
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 3px;
+    }
+}
+
+.line-animation {
+    stroke-dashoffset: 600;
+    stroke-dasharray: 600;
+    animation: animdash 5s infinite 6s;
+}
+
+@keyframes animdash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

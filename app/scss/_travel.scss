@@ -1,0 +1,125 @@
+.travel {
+    position: relative;
+    padding-bottom: 200px;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: -130px;
+        bottom: 0px;
+
+        display: block;
+        width: 259px;
+        height: 440px;
+
+        background-image: url('../img/cocktail.png');
+    }
+}
+
+.travel-slider {
+
+    margin-top: 400px;
+
+    .slider__arrows {
+        top: 200px;
+        opacity: 0.3;
+    }
+
+    &__image {
+        position: relative;
+
+        background-image: url('../img/beach.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        min-height: 781px;
+    }
+
+    &__subtitle {
+        top: 100px;
+    }
+
+    &__heading {
+        left: 130px;
+        bottom: 0px;
+        right: unset;
+        top: unset;
+    }
+
+    &__airplane {
+        position: absolute;
+
+        bottom: 0px;
+        right: -60px;
+    }
+
+    &__btn {
+        width: 336px;
+        margin: 0 auto;
+        margin-top: 70px;
+
+        background: linear-gradient(to right, transparent 0px, transparent 125px, #4AF6CD 125px, #4AF6CD 100%);
+    }
+
+    &__airline-image {
+        display: inline-block !important;
+        width: 52px;
+        height: 46px;
+        margin-left: 20px;
+    }
+}
+
+.details {
+
+    display: flex;
+    max-width: 1200px;
+    height: 220px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    &__item:nth-of-type(1) {
+        width: 340px;
+    }
+
+    &__item:nth-of-type(2) {
+        width: 300px;
+    }
+
+    &__item:nth-of-type(3) {
+        width: 290px;
+    }
+
+    &__item:nth-of-type(4) {
+        width: 270px;
+    }
+
+    &__heading {
+        display: block;
+
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 8px;
+
+        transform: rotate(90deg);
+        transform-origin: left bottom;
+    }
+
+    &__value {
+        display: block;
+
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 36px;
+
+        padding-left: 40px;
+    }
+
+    &__parameters {
+        font-size: 14px;
+        line-height: 36px;
+        letter-spacing: 5.25px;
+
+        padding-left: 40px;
+    }
+}

@@ -1,0 +1,106 @@
+.sleep {
+    position: relative;
+    padding-bottom: 200px;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: -173px;
+        bottom: 0px;
+
+        display: block;
+        width: 346px;
+        height: 547px;
+
+        background-image: url('../img/frangipani.png');
+    }
+}
+
+.sleep-slider {
+
+    margin-top: 400px;
+
+    .slider__arrows {
+        top: 200px;
+        opacity: 0.3;
+    }
+
+    &__image {
+        position: relative;
+
+        background-image: url('../img/sleep.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        min-height: 781px;
+    }
+
+    &__subtitle {
+        top: 100px;
+    }
+
+    &__heading {
+        left: 130px;
+        bottom: 0px;
+        right: unset;
+        top: unset;
+    }
+
+    &__hammock {
+        position: absolute;
+
+        bottom: 0px;
+        right: -150px;
+    }
+
+    &__btn {
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 70px;
+
+        background: linear-gradient(to right, transparent 0px, transparent 125px, #4AF6CD 125px, #4AF6CD 100%);
+    }
+
+    &__airline-image {
+        display: inline-block !important;
+        width: 186px;
+        height: 54px;
+        margin-left: 20px;
+        margin-bottom: -10px;
+    }
+}
+
+.details { 
+
+    &__item {
+        position: relative;
+    }
+
+    &__controls {
+        position: absolute;
+        top: 70px;
+        left: 160px;
+
+        display: flex;
+        justify-content: space-between;
+        width: 44px;
+    }
+
+    &__btn {
+        width: 14px;
+        height: 14px;
+
+        background-image: url('../img/plus.svg');
+        background-color: transparent;
+        border: none;
+
+        cursor: pointer;
+
+        &--minus {
+            background-image: url('../img/minus.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

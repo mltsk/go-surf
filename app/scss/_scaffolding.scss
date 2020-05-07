@@ -1,0 +1,186 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+ul, 
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Fira Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+
+    background-color: #171919;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.subtitle {
+    position: absolute;
+    top: 300px;
+    right: 80px;
+
+    display: inline-block;
+
+    text-align: right;
+
+    &__head {
+        position: relative;
+
+        padding-right: 10px;
+
+        text-align: right;
+        font-weight: 800;
+        font-size: 40px;
+
+        span {
+            font-weight: 100;
+        }
+    }
+
+    &--right {
+        text-align: left;
+    }
+}
+
+.headline-left {
+    position: relative;
+
+    display: inline-block;
+    padding-left: 103px;
+
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 7.33333px;
+    opacity: 0.5;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+
+        width: 80px;
+        height: 1px;
+
+        background-color: white;
+    }
+
+    &--right {
+        padding-left: 0;
+        padding-right: 103px;
+    }
+
+    &--right::before {
+        left: unset;
+        right: 0;
+    }
+}
+
+.title {
+
+    position: absolute;
+    top: 160px;
+    left: -50px;
+
+    width: 480px;
+
+    height: 200px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -5px;
+        right: 0;
+
+        width: 80px;
+        height: 1px;
+
+        background-color: $green;
+    }
+
+    h3 {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        margin: 0;
+        padding: 0;
+
+        font-weight: 800;
+        font-size: 80px;
+        line-height: 80px;
+    }
+
+    span {
+        position: absolute;
+
+        font-weight: 800;
+        font-size: 200px;
+        line-height: 200px;
+
+        opacity: 0.02;
+    }
+}
+
+.btn {
+    position: relative;
+
+    display: block;
+    width: 277px;
+    height: 80px;
+    padding-top: 20px;
+    padding-left: 5px;
+
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+
+    background: linear-gradient(to right, transparent 0px, transparent 109px, $green 109px, $green 100%);
+
+    span {
+        font-weight: 100;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 30px;
+        right: 17px;
+
+        width: 24px;
+        height: 20px;
+
+        background-image: url('../img/arrows-right.svg');
+    }
+}
