@@ -184,3 +184,71 @@ img {
         background-image: url('../img/arrows-right.svg');
     }
 }
+
+.quantity {
+
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button
+  {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type=number]
+  {
+    -moz-appearance: textfield;
+  }
+  
+  .quantity input {
+    width: 30px;
+    height: 36px;
+    line-height: 1.65;
+    float: left;
+    display: block;
+    padding: 0;
+    margin: 0;
+    padding-left: 0px;
+    border: none;
+    background-color: transparent;
+
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 36px;
+    color: white;
+  }
+  
+  .quantity input:focus {
+    outline: 0;
+  }
+  
+  .quantity-nav {
+    position: absolute;
+    top: 70px;
+    left: 160px;
+
+    display: flex;
+    justify-content: space-between;
+    width: 44px;
+  }
+  
+  .quantity-button {
+    width: 14px;
+    height: 14px;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+  }
+  
+  .quantity-button.quantity-up {
+    background-image: url('../img/plus.svg');
+  }
+  
+  .quantity-button.quantity-down {
+    background-image: url('../img/minus.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }

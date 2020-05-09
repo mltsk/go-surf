@@ -1,0 +1,30 @@
+.footer {
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 300px;
+
+    &__btn {
+        width: 172px;
+        margin: 0 auto;
+
+        font-size: 32px;
+        line-height: 48px;
+
+        background: linear-gradient(to right, transparent 0px, transparent 59px, #4AF6CD 59px, #4AF6CD 100%);
+
+        &::after {
+            display: none;
+        }
+    }
+
+    &__copyright {
+        margin-top: 25px;
+        padding-bottom: 20px;
+
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 1.05px;
+        opacity: 0.5;
+    }
+}

@@ -19,14 +19,13 @@
 
     &__box {
         position: relative;
-
         background-repeat: no-repeat;
         background-size: cover;
         cursor: pointer;
     }
 
     &__inner {
-        min-height: 650px;
+        min-height: 750px;
 
         background-color: rgba($color: #1C2121, $alpha: 0.85);
         transition: 1s;
@@ -98,10 +97,6 @@
         .surf-slider__box{
             margin-top: 90px;
         }
-    }
-
-    .slick-slide {
-        margin-left: -30px;
     }
 }
 
