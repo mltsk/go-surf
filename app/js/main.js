@@ -1,5 +1,17 @@
 $(function(){
 
+
+    $(document).ready(function(){
+        $('a[href*="#"]').on("click", function(e){
+        var anchor = $(this);
+        $('html, body').stop().animate({
+        scrollTop: $(anchor.attr('href')).offset().top
+        }, 777);
+        e.preventDefault();
+        return false;
+        });
+        });
+
     jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up"></div><div class="quantity-button quantity-down"></div></div>').insertAfter('.quantity input');
     jQuery('.quantity').each(function() {
       var spinner = jQuery(this),
@@ -163,20 +175,33 @@ $(function(){
         prevArrow: '<img class="slider__arrows slider__arrows--left" width="25" height="21" src="img/arrows-left.svg" alt="Previous slide"></img>',
         nextArrow: '<img class="slider__arrows slider__arrows--right" width="25" height="21" src="img/arrows-right.svg" alt="Next slide"></img>',
     });
+
+    wow = new WOW(
+        {
+        boxClass:     'wow',      // default
+        animateClass: 'animated', // default
+        offset:       0,          // default
+        mobile:       false,       // default
+        live:         true        // default
+      }
+      )
+      wow.init();
+
+    
   
 });
 
-// let shopButton = document.querySelectorAll('.surfboard__btn'),
-//     shopSlider = document.querySelector('.shop-slider');
+let shopButton = document.querySelectorAll('.surfboard__btn'),
+    shopSlider = document.querySelector('.shop-slider');
 
-// shopSlider.addEventListener('click', function(event){
-//     let target = event.target;
-//     console.log(target)
+shopSlider.addEventListener('click', function(event){
+    let target = event.target;
+    console.log(target)
 
-//     if (target.classList.contains('surfboard__btn')) {
-//         target.classList.toggle('surfboard__btn--active');
-//     }
-//  });
+    if (target.classList.contains('surfboard__btn')) {
+        target.classList.toggle('surfboard__btn--active');
+    }
+ });
 
 
 let menuBtn = document.querySelector('.menu-btn');

@@ -18,8 +18,10 @@ body{
     font-weight: 400;
     color: white;
     text-transform: uppercase;
+    min-width: 320px;
 
     background-color: #171919;
+    overflow-x: hidden;
 }
 
 a {
@@ -149,7 +151,7 @@ img {
         font-size: 200px;
         line-height: 200px;
 
-        opacity: 0.02;
+        color: rgba($color: white, $alpha: 0.02);
     }
 }
 
